@@ -1,12 +1,12 @@
 .kanban {
     display: flex;
-    align-items: flex-start;
-
+    justify-content: space-between;
+    
     &__section {
-        width: 400px;
-        background-color: #383838;
-        padding: 10px;
-        border-radius: 10px;
+        width: 32.8%;
+        background-color: #fff;
+    
+  
 
         & ~ & {
             margin-left: 10px;
@@ -21,6 +21,7 @@
         &__content {
             & > * ~ * {
                 margin-top: 10px;
+               
             }
         }
     } 

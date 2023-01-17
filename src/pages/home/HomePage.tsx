@@ -51,15 +51,13 @@ const HomePage = (props:Props) => {
                                     className='kanban__section'
                                     ref={provided.innerRef}
                                 >
-                                    <div className="kanban__section__title">
-                                        {section.title}
-                                    </div>
+                                 
                                     <div className="kanban__section__content">
                                         {
                                             section.tasks.map((task, index) => (
                                                 <Draggable
                                                     key={task.id}
-                                                    draggableId={task.id}
+                                                    draggableId={task.id.toString()}
                                                     index={index}
                                                 >
                                                     {(provided, snapshot) => (

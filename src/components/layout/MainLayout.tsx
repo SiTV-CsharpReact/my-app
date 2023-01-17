@@ -13,7 +13,7 @@ const MainLayout = (props: Props) => {
      <Topbar/>
       <Box component="nav" sx={{width: sizeConfigs.sidebar.width,
       flexShrink:0
-            
+      
       }}>
       <Sidebar/>
       </Box>
@@ -28,7 +28,7 @@ const MainLayout = (props: Props) => {
        }}
        
        >
-       <Toolbar/>
+       <Toolbar sx={{minHeight:'40px !important'}}/>
        <Outlet/>
        </Box>
     </Box>

@@ -1,4 +1,5 @@
-import { ListItemButton, ListItemIcon, Typography } from "@mui/material";
+import { ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
+import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import colorConfigs from "../../configs/colorConfigs";
@@ -12,7 +13,15 @@ type Props = {
 
 const SidebarItem = ({ item }: Props) => {
   const { appState } = useSelector((state: RootState) => state.appState);
+  const [open, setOpen] = React.useState(false);
 
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
   return (
     item.sidebarProps && item.path ? (
       <ListItemButton
@@ -38,6 +47,7 @@ const SidebarItem = ({ item }: Props) => {
             fontSize: sizeConfigs.sidebar.fontS,
           fontWeight: sizeConfigs.sidebar.fontW500,}}>
         {item.sidebarProps.displayText}
+       
         </Typography>
       
       </ListItemButton>
